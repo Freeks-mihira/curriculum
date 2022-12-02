@@ -16,16 +16,18 @@ switch2 - switch4 ethernet      10Mbps ショートパスコスト：100
 switch4 - switch3 ethernet      10Mbps ショートパスコスト：100
 switch3 - switch1 ethernet      10Mbps ショートパスコスト：100
 
-ルートポート（上記より）
-Switch1 : switch1 - switch3 F0/1側
+ルートポートの選出（上記より）
+Switch1 : switch1 - switch3 F0/2側
 Switch2 : switch2 - switch1 F0/1側
 Switch4 : switch4 - switch3 E0/2側
 
-指定ポート
+指定ポートの選出
 ルートブリッジのswitch3のポート2つ　上側と右側
 ルートポートの向かいのポート　switch1のswitch2側のポート F0/1側
 switch2 - switch4間が役割がないのでブリッジIDの値がswitch2より小さいswitch4が指定ポートに　E0/1側
 
-ブロッキングポート
-残り一つ役割が割り当てられていないswitch2のswitch4側のポートがブロッキングポートに　F0/2側
+ブロッキングポートの選出
+役割が割り当てられていないswitch2のswitch4側のポートで
+ブリッジプライオリティがswitch4の方が値が小さいので指定ポートに　E0/1側
+残ったswitch2が非指定ポートに　F0/2側
 
